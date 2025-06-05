@@ -71,7 +71,7 @@ main {
 
 /* Navbar */
 #navbar {
-  background: rgba(31, 41, 55, 0.85);
+  background: rgba(31, 41, 55, 0.85); /* gray-900 with opacity */
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
 }
@@ -83,6 +83,8 @@ main {
 
 .nav-link {
   position: relative;
+  font-size: 1rem;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
@@ -101,6 +103,59 @@ main {
 @keyframes slide-in {
   0% { width: 0; }
   100% { width: 100%; }
+}
+
+/* Mobile Menu */
+#mobile-menu {
+  display: none; /* Hidden by default */
+  background: rgba(31, 41, 55, 0.95);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+#mobile-menu:not(.hidden) {
+  display: block; /* Show when 'hidden' class is removed */
+}
+
+#mobile-menu a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #navbar {
+    height: 48px;
+  }
+
+  #navbar .h-12 {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.75rem;
+  }
+
+  #mobile-menu a {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #navbar .h-12 {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  #mobile-menu a {
+    font-size: 0.675rem;
+    padding: 0.5rem 0.75rem;
+  }
 }
 
 /* Preloader */
