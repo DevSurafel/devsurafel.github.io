@@ -37,8 +37,12 @@ body {
 }
 
 .main-container {
+  max-width: 1280px; /* Tailwind's max-w-7xl */
+  margin: 3rem auto;
   background: var(--card-bg);
   box-shadow: var(--shadow-dark);
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 section {
@@ -280,7 +284,7 @@ h3 {
   }
 
   section {
-    margin: 1rem 0.5rem;
+    margin: 0.75rem 0.5rem;
     padding: 1rem 0.75rem;
     border-radius: 8px;
   }
@@ -300,6 +304,15 @@ h3 {
     max-width: 100%;
     margin: 0 auto;
     padding: 0.5rem;
+    transition: transform 0.2s ease;
+  }
+
+  .project-card:hover,
+  .certificate-card:hover,
+  .blog-card:hover,
+  .testimonial-card:hover,
+  .contact-card:hover {
+    transform: translateY(-4px);
   }
 
   .project-card img,
@@ -309,6 +322,62 @@ h3 {
     max-height: 120px;
     width: 100%;
     object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  /* Experience section - card layout */
+  #experience .timeline {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #experience .timeline::before,
+  #experience .timeline-item::before {
+    display: none;
+  }
+
+  #experience .timeline-item {
+    position: relative;
+  }
+
+  #experience .timeline-item .flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #experience .timeline-item .w-1/2 {
+    width: 100%;
+    padding: 0;
+  }
+
+  #experience .timeline-item .bg-gray-900 {
+    background: var(--gray-800);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.2s ease;
+  }
+
+  #experience .timeline-item .bg-gray-900:hover {
+    transform: translateY(-4px);
+  }
+
+  #experience .timeline-item img {
+    max-height: 40px;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  #experience .timeline-item h3 {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+
+  #experience .timeline-item p,
+  #experience .timeline-item li {
+    font-size: 0.75rem;
+    line-height: 1.3;
   }
 
   /* Skills section - horizontal scroll */
@@ -330,6 +399,11 @@ h3 {
     width: 80px;
     text-align: center;
     scroll-snap-align: center;
+    transition: transform 0.2s ease;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-4px);
   }
 
   .skill-card img {
@@ -337,6 +411,7 @@ h3 {
     max-height: 30px;
     width: auto;
     max-width: 100%;
+    border-radius: 0.25rem;
   }
 
   .skill-card p {
@@ -430,6 +505,7 @@ h3 {
     font-size: 0.75rem;
     width: 100%;
     text-align: center;
+    border-radius: 0.5rem;
   }
 
   .social-icon i {
@@ -439,44 +515,6 @@ h3 {
   .hero-buttons a {
     width: 100%;
     margin-bottom: 0.5rem;
-  }
-
-  /* Experience section - timeline */
-  .timeline-item .flex {
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    padding-left: 2rem;
-  }
-
-  .timeline-item .w-1/2 {
-    width: 100%;
-    padding: 0.5rem 0;
-    text-align: left;
-  }
-
-  .timeline-item::before {
-    left: 0.75rem;
-    top: 1rem;
-    transform: none;
-    width: 12px;
-    height: 12px;
-    border-width: 3px;
-  }
-
-  .timeline::before {
-    left: 0.75rem;
-    width: 3px;
-  }
-
-  .timeline-item img {
-    max-height: 40px;
-    margin-bottom: 0.5rem;
-  }
-
-  .timeline-item .bg-gray-900 {
-    padding: 0.75rem;
-    border-radius: 0.5rem;
   }
 }
 
@@ -505,6 +543,21 @@ h3 {
     r: 16;
     cx: 17.5;
     cy: 17.5;
+  }
+
+  /* Experience section */
+  #experience .timeline-item img {
+    max-height: 35px;
+  }
+
+  #experience .timeline-item h3 {
+    font-size: 0.75rem;
+  }
+
+  #experience .timeline-item p,
+  #experience .timeline-item li {
+    font-size: 0.675rem;
+    line-height: 1.3;
   }
 
   /* Sections */
@@ -544,20 +597,5 @@ h3 {
 
   .social-icon i {
     font-size: 0.875rem;
-  }
-
-  /* Timeline */
-  .timeline-item::before {
-    width: 10px;
-    height: 10px;
-    border-width: 2px;
-  }
-
-  .timeline::before {
-    width: 2px;
-  }
-
-  .timeline-item img {
-    max-height: 35px;
   }
 }
