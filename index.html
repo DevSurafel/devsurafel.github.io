@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <!-- Google Tag Manager -->
@@ -99,7 +99,7 @@
           <a href="#intro" class="flex-shrink-0">
             <img src="assets/img/githubp.jpeg" alt="Surafel Diriba Profile Picture"
               class="h-12 w-12 rounded-full border-4 border-teal-400 transition-transform duration-300 hover:scale-110"
-              loading="lazy">
+              loading="lazy" sizes="(max-width: 768px) 100vw, 12vw">
           </a>
           <div class="hidden md:flex space-x-6 ml-10">
             <a href="#about"
@@ -128,7 +128,7 @@
           </button>
           <div class="md:hidden">
             <button id="mobile-menu-btn" class="text-gray-200 hover:text-teal-400 focus:outline-none"
-              aria-label="Toggle mobile menu">
+              aria-label="Toggle mobile menu" aria-expanded="false">
               <i class="fas fa-bars text-2xl"></i>
             </button>
           </div>
@@ -138,7 +138,7 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu"
       class="hidden md:hidden bg-gray-900 bg-opacity-95 backdrop-blur-lg transition-all duration-300">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 animate__animated animate__slideInDown">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 animate__animated animate__slideInDown" style="display: none;">
         <a href="#about" class="block px-3 py-2 text-gray-200 hover:bg-teal-500 hover:text-white transition">About</a>
         <a href="#experience"
           class="block px-3 py-2 text-gray-200 hover:bg-teal-500 hover:text-white transition">Experience</a>
@@ -186,7 +186,7 @@
               data-tippy-content="GitHub" aria-label="Visit GitHub profile">
               <i class="fab fa-github fa-2x"></i>
             </a>
-            <a href="https://twitter.com/Surafel_Diriba" target="_blank"
+            <a href="https://twitter.com/Surafel_Diriba_" target="_blank"
               class="social-icon text-teal-400 hover:text-pink-500 transition animate__animated animate__bounceIn"
               data-tippy-content="Twitter" aria-label="Visit Twitter profile">
               <i class="fab fa-twitter fa-2x"></i>
@@ -239,7 +239,7 @@
           <h2
             class="text-4xl md:text-5xl font-space-grotesk font-bold text-teal-400 mb-8 text-center animated-underline">
             Experience</h2>
-          <div class="relative">
+          <div class="relative timeline">
             <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-teal-400"></div>
             <div class="space-y-12">
               <div class="relative timeline-item animate__animated animate__fadeInLeft">
@@ -251,7 +251,8 @@
                   </div>
                   <div class="w-1/2 pl-8">
                     <div class="bg-gray-900 bg-opacity-95 backdrop-blur-lg shadow-lg rounded-lg p-6 animated-border">
-                      <img src="assets/img/exp-zhiffy-logo-1.webp" alt="Zhiffy logo" class="h-12 mb-4" loading="lazy">
+                      <img src="assets/img/exp-zhiffy-logo-1.webp" alt="Zhiffy logo" class="h-12 mb-4" loading="lazy"
+                        sizes="(max-width: 768px) 100vw, 12vw">
                       <ul class="list-disc pl-6 text-gray-300">
                         <li>Developed backend for e-commerce platform using Flask and MongoDB.</li>
                         <li>Built 50+ RESTful APIs for various applications.</li>
@@ -270,7 +271,7 @@
                   <div class="w-1/2 pr-8">
                     <div class="bg-gray-900 bg-opacity-95 backdrop-blur-lg shadow-lg rounded-lg p-6 animated-border">
                       <img src="assets/img/exp-meditab-logo-500x500.jpg" alt="Meditab logo" class="h-12 mb-4"
-                        loading="lazy">
+                        loading="lazy" sizes="(max-width: 768px) 100vw, 12vw">
                       <ul class="list-disc pl-6 text-gray-300">
                         <li>Optimized algorithms for drug dispenser robots, reducing cycle time by 25%.</li>
                         <li>Developed video analytics app with Flask and OpenCV.</li>
@@ -316,7 +317,7 @@
               <div class="p-6 project-header relative z-10">
                 <img src="assets/img/project-music-player.png" alt="Music Player Web-App"
                   class="w-full h-48 object-cover rounded mb-4 transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy">
+                  loading="lazy" sizes="(max-width: 768px) 100vw, 33vw">
                 <h3 class="text-xl font-semibold text-teal-400">Music Player Web-App</h3>
               </div>
               <div
@@ -343,7 +344,7 @@
               <div class="p-6 project-header relative z-10">
                 <img src="assets/img/project-quizup-logo-1.png" alt="Quiz Web-App"
                   class="w-full h-48 object-cover rounded mb-4 transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy">
+                  loading="lazy" sizes="(max-width: 768px) 100vw, 33vw">
                 <h3 class="text-xl font-semibold text-teal-400">Quiz Web-App</h3>
               </div>
               <div
@@ -369,7 +370,7 @@
               <div class="p-6 project-header relative z-10">
                 <img src="assets/img/project-blog-logo.jpg" alt="Blog Web-App"
                   class="w-full h-48 object-cover rounded mb-4 transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy">
+                  loading="lazy" sizes="(max-width: 768px) 100vw, 33vw">
                 <h3 class="text-xl font-semibold text-teal-400">Blog Web-App</h3>
               </div>
               <div
@@ -394,7 +395,7 @@
               <div class="p-6 project-header relative z-10">
                 <img src="assets/img/project-aim_bert-bias.png" alt="Visual Question Answering"
                   class="w-full h-48 object-cover rounded mb-4 transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy">
+                  loading="lazy" sizes="(max-width: 768px) 100vw, 33vw">
                 <h3 class="text-xl font-semibold text-teal-400">Visual Question Answering</h3>
               </div>
               <div
@@ -433,7 +434,8 @@
               <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
                 <div class="skill-card transform hover:scale-110 transition glow"
                   data-tippy-content="Proficient in backend and AI development">
-                  <img src="assets/img/python-logo-1-300x300.jpg" alt="Python" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/python-logo-1-300x300.jpg" alt="Python" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">Python</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="90">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -442,7 +444,8 @@
                 </div>
                 <div class="skill-card transform hover:scale-110 transition glow"
                   data-tippy-content="Expert in semantic HTML">
-                  <img src="assets/img/html5-300x300.jpg" alt="HTML5" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/html5-300x300.jpg" alt="HTML5" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">HTML5</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="85">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -451,7 +454,8 @@
                 </div>
                 <div class="skill-card transform hover:scale-110 transition glow"
                   data-tippy-content="Advanced CSS with animations">
-                  <img src="assets/img/css3-300x300.jpg" alt="CSS3" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/css3-300x300.jpg" alt="CSS3" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">CSS3</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="80">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -460,7 +464,8 @@
                 </div>
                 <div class="skill-card transform hover:scale-110 transition glow"
                   data-tippy-content="Database management">
-                  <img src="assets/img/mysql-logo-1-300x300.jpg" alt="MySQL" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/mysql-logo-1-300x300.jpg" alt="MySQL" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">MySQL</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="75">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -469,7 +474,8 @@
                 </div>
                 <div class="skill-card transform hover:scale-110 transition glow"
                   data-tippy-content="System-level programming">
-                  <img src="assets/img/c++logo.png" alt="C++" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/c++logo.png" alt="C++" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">C++</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="70">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -478,7 +484,8 @@
                 </div>
                 <div class="skill-card transform hover:scale-110 transition glow"
                   data-tippy-content="Low-level programming">
-                  <img src="assets/img/c-logo.png" alt="C" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/c-logo.png" alt="C" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">C</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="65">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -493,7 +500,8 @@
               <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
                 <div class="skill-card transform hover:scale-110 transition glow"
                   data-tippy-content="Machine learning and AI">
-                  <img src="assets/img/tensorflow-logo.png" alt="TensorFlow" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/tensorflow-logo.png" alt="TensorFlow" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">TensorFlow</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="85">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -501,7 +509,8 @@
                   </svg>
                 </div>
                 <div class="skill-card transform hover:scale-110 transition glow" data-tippy-content="Computer vision">
-                  <img src="assets/img/opencv-logo.png" alt="OpenCV" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/opencv-logo.png" alt="OpenCV" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">OpenCV</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="80">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -510,7 +519,8 @@
                 </div>
                 <div class="skill-card transform hover:scale-110 transition glow"
                   data-tippy-content="Data manipulation">
-                  <img src="assets/img/pandas-logo.png" alt="Pandas" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/pandas-logo.png" alt="Pandas" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">Pandas</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="75">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -525,7 +535,8 @@
               <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
                 <div class="skill-card transform hover:scale-110 transition glow"
                   data-tippy-content="Backend development">
-                  <img src="assets/img/flask-logo.png" alt="Flask" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/flask-logo.png" alt="Flask" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">Flask</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="90">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -534,7 +545,8 @@
                 </div>
                 <div class="skill-card transform hover:scale-110 transition glow"
                   data-tippy-content="Full-stack development">
-                  <img src="assets/img/django-logo.png" alt="Django" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/django-logo.png" alt="Django" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">Django</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="85">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -543,7 +555,8 @@
                 </div>
                 <div class="skill-card transform hover:scale-110 transition glow"
                   data-tippy-content="Mobile app development">
-                  <img src="assets/img/flutter-logo.png" alt="Flutter" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/flutter-logo.png" alt="Flutter" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">Flutter</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="80">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -557,7 +570,8 @@
               <h3 class="text-2xl font-semibold text-teal-400 mb-4">Others</h3>
               <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
                 <div class="skill-card transform hover:scale-110 transition glow" data-tippy-content="Cloud computing">
-                  <img src="assets/img/aws-logo.png" alt="AWS" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/aws-logo.png" alt="AWS" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">AWS</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="70">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -565,7 +579,8 @@
                   </svg>
                 </div>
                 <div class="skill-card transform hover:scale-110 transition glow" data-tippy-content="Version control">
-                  <img src="assets/img/git.png" alt="Git" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/git.png" alt="Git" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">Git</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="85">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -573,7 +588,8 @@
                   </svg>
                 </div>
                 <div class="skill-card transform hover:scale-110 transition glow" data-tippy-content="Containerization">
-                  <img src="assets/img/docker-logo.png" alt="Docker" class="h-16 mx-auto" loading="lazy">
+                  <img src="assets/img/docker-logo.png" alt="Docker" class="h-16 mx-auto" loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 16vw">
                   <p class="mt-2 text-gray-300">Docker</p>
                   <svg class="w-20 h-20 mx-auto mt-2 progress-ring" data-progress="75">
                     <circle class="progress-ring__circle" stroke="var(--teal-400)" stroke-width="4" fill="transparent"
@@ -629,7 +645,7 @@
             <div
               class="bg-gray-900 bg-opacity-95 backdrop-blur-lg shadow-lg rounded-lg overflow-hidden blog-card animated-border">
               <img src="https://via.placeholder.com/300x200" alt="Building Scalable APIs with Flask"
-                class="w-full h-40 object-cover" loading="lazy">
+                class="w-full h-40 object-cover" loading="lazy" sizes="(max-width: 768px) 100vw, 33vw">
               <div class="p-6">
                 <h3 class="text-xl font-semibold text-teal-400">Building Scalable APIs with Flask</h3>
                 <p class="text-gray-300 text-sm mt-2">A deep dive into creating efficient and scalable RESTful APIs
@@ -642,7 +658,7 @@
             <div
               class="bg-gray-900 bg-opacity-95 backdrop-blur-lg shadow-lg rounded-lg overflow-hidden blog-card animated-border">
               <img src="https://via.placeholder.com/300x200" alt="Introduction to Machine Learning with TensorFlow"
-                class="w-full h-40 object-cover" loading="lazy">
+                class="w-full h-40 object-cover" loading="lazy" sizes="(max-width: 768px) 100vw, 33vw">
               <div class="p-6">
                 <h3 class="text-xl font-semibold text-teal-400">Introduction to Machine Learning with TensorFlow</h3>
                 <p class="text-gray-300 text-sm mt-2">Learn the basics of machine learning and how to implement models
@@ -655,7 +671,7 @@
             <div
               class="bg-gray-900 bg-opacity-95 backdrop-blur-lg shadow-lg rounded-lg overflow-hidden blog-card animated-border">
               <img src="https://via.placeholder.com/300x200" alt="Optimizing Web Apps with AWS"
-                class="w-full h-40 object-cover" loading="lazy">
+                class="w-full h-40 object-cover" loading="lazy" sizes="(max-width: 768px) 100vw, 33vw">
               <div class="p-6">
                 <h3 class="text-xl font-semibold text-teal-400">Optimizing Web Apps with AWS</h3>
                 <p class="text-gray-300 text-sm mt-2">Explore how to leverage AWS services to enhance the performance
@@ -683,7 +699,7 @@
               <div class="p-6 certificate-header relative z-10">
                 <img src="https://via.placeholder.com/300x200" alt="Machine Learning Certificate"
                   class="w-full h-48 object-cover rounded mb-4 transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy">
+                  loading="lazy" sizes="(max-width: 768px) 100vw, 33vw">
                 <h3 class="text-xl font-semibold text-teal-400">Machine Learning (Stanford)</h3>
               </div>
               <div
@@ -703,7 +719,7 @@
               <div class="p-6 certificate-header relative z-10">
                 <img src="https://via.placeholder.com/300x200" alt="AWS Certified Solutions Architect"
                   class="w-full h-48 object-cover rounded mb-4 transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy">
+                  loading="lazy" sizes="(max-width: 768px) 100vw, 33vw">
                 <h3 class="text-xl font-semibold text-teal-400">AWS Certified Solutions Architect</h3>
               </div>
               <div
@@ -722,7 +738,7 @@
               <div class="p-6 certificate-header relative z-10">
                 <img src="https://via.placeholder.com/300x200" alt="Python for Data Science"
                   class="w-full h-48 object-cover rounded mb-4 transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy">
+                  loading="lazy" sizes="(max-width: 768px) 100vw, 33vw">
                 <h3 class="text-xl font-semibold text-teal-400">Python for Data Science</h3>
               </div>
               <div
@@ -904,12 +920,16 @@
     // Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenuBtn && mobileMenu) {
+    const mobileMenuContent = mobileMenu.querySelector('div');
+    if (mobileMenuBtn && mobileMenu && mobileMenuContent) {
       mobileMenuBtn.addEventListener('click', () => {
+        const isExpanded = !mobileMenu.classList.contains('hidden');
         mobileMenu.classList.toggle('hidden');
+        mobileMenuContent.style.display = mobileMenu.classList.contains('hidden') ? 'none' : 'block';
         mobileMenuBtn.innerHTML = mobileMenu.classList.contains('hidden')
           ? '<i class="fas fa-bars text-2xl"></i>'
           : '<i class="fas fa-times text-2xl"></i>';
+        mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
         console.log('Mobile menu toggled');
       });
     }
@@ -932,17 +952,30 @@
       once: true,
       offset: 150,
       anchorPlacement: 'top-bottom',
-      disable: 'mobile'
+      disable: function () {
+        return window.innerWidth < 768;
+      }
     });
 
-    // GSAP Animations
-    gsap.from("#hero-title", { duration: 1, y: 50, opacity: 0, ease: "power3.out", delay: 0.5 });
-    gsap.from("#hero-buttons", { duration: 1, y: 50, opacity: 0, ease: "power3.out", delay: 0.7 });
-    gsap.from(".nav-link", { duration: 0.5, y: -20, opacity: 0, stagger: 0.1, delay: 0.3 });
+    // Ensure sections are visible on mobile
+    if (window.innerWidth < 768) {
+      document.querySelectorAll('.animated-section').forEach((section) => {
+        section.style.opacity = '1';
+        section.style.display = 'block';
+        section.style.transform = 'none';
+      });
+    }
+
+    // GSAP Animations (only for desktop)
+    if (window.innerWidth >= 768) {
+      gsap.from("#hero-title", { duration: 1, y: 50, opacity: 0, ease: "power3.out", delay: 0.5 });
+      gsap.from("#hero-buttons", { duration: 1, y: 50, opacity: 0, ease: "power3.out", delay: 0.7 });
+      gsap.from(".nav-link", { duration: 0.5, y: -20, opacity: 0, stagger: 0.1, delay: 0.3 });
+    }
 
     // Particles.js Initialization
     try {
-      if (typeof particlesJS !== 'undefined') {
+      if (typeof particlesJS !== 'undefined' && window.innerWidth >= 768) {
         particlesJS('particles-js', {
           particles: {
             number: { value: 80, density: { enable: true, value_area: 800 } },
