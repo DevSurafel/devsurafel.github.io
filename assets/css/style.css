@@ -3,10 +3,13 @@
 
 /* Theme variables */
 :root {
-  --background: #1a202c; /* gray-900 */
-  --card-bg: #1f2937; /* gray-800 */
+  --background: #1a202c;
+  /* gray-900 */
+  --card-bg: #1f2937;
+  /* gray-800 */
   --text-primary: #ffffff;
-  --text-secondary: #d1d5db; /* gray-300 */
+  --text-secondary: #d1d5db;
+  /* gray-300 */
   --teal-400: #2dd4bf;
   --pink-500: #ec4899;
   --gray-800: #1f2937;
@@ -16,12 +19,17 @@
 }
 
 [data-theme='light'] {
-  --background: #f3f4f6; /* gray-100 */
+  --background: #f3f4f6;
+  /* gray-100 */
   --card-bg: #ffffff;
-  --text-primary: #111827; /* gray-900 */
-  --text-secondary: #4b5563; /* gray-600 */
-  --teal-400: #0d9488; /* teal-600 */
-  --pink-500: #db2777; /* pink-600 */
+  --text-primary: #111827;
+  /* gray-900 */
+  --text-secondary: #4b5563;
+  /* gray-600 */
+  --teal-400: #0d9488;
+  /* teal-600 */
+  --pink-500: #db2777;
+  /* pink-600 */
   --gray-800: #f3f4f6;
   --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
   --shadow-dark: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -71,7 +79,7 @@ main {
 
 /* Navbar */
 #navbar {
-  background: rgba(31, 41, 55, 0.85); /* gray-900 with opacity */
+  background: rgba(31, 41, 55, 0.85);
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
 }
@@ -83,8 +91,6 @@ main {
 
 .nav-link {
   position: relative;
-  font-size: 1rem;
-  font-weight: 500;
   transition: color 0.3s ease;
 }
 
@@ -101,60 +107,12 @@ main {
 }
 
 @keyframes slide-in {
-  0% { width: 0; }
-  100% { width: 100%; }
-}
-
-/* Mobile Menu */
-#mobile-menu {
-  display: none; /* Hidden by default */
-  background: rgba(31, 41, 55, 0.95);
-  backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
-}
-
-#mobile-menu:not(.hidden) {
-  display: block; /* Show when 'hidden' class is removed */
-}
-
-#mobile-menu a {
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  display: block;
-  padding: 0.5rem 1rem;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  #navbar {
-    height: 48px;
+  0% {
+    width: 0;
   }
 
-  #navbar .h-12 {
-    height: 2.5rem;
-    width: 2.5rem;
-  }
-
-  .nav-link {
-    font-size: 0.75rem;
-  }
-
-  #mobile-menu a {
-    font-size: 0.75rem;
-    padding: 0.5rem 1rem;
-  }
-}
-
-@media (max-width: 640px) {
-  #navbar .h-12 {
-    height: 2rem;
-    width: 2rem;
-  }
-
-  #mobile-menu a {
-    font-size: 0.675rem;
-    padding: 0.5rem 0.75rem;
+  100% {
+    width: 100%;
   }
 }
 
@@ -182,12 +140,21 @@ main {
 }
 
 @keyframes spin {
-  100% { transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes glow {
-  0%, 100% { stroke: var(--teal-400); }
-  50% { stroke: var(--pink-500); }
+
+  0%,
+  100% {
+    stroke: var(--teal-400);
+  }
+
+  50% {
+    stroke: var(--pink-500);
+  }
 }
 
 /* Particles Background */
@@ -274,9 +241,17 @@ section:hover {
 }
 
 @keyframes border-glow {
-  0% { border-image-source: linear-gradient(45deg, #2dd4bf, #ec4899); }
-  50% { border-image-source: linear-gradient(45deg, #ec4899, #2dd4bf); }
-  100% { border-image-source: linear-gradient(45deg, #2dd4bf, #ec4899); }
+  0% {
+    border-image-source: linear-gradient(45deg, #2dd4bf, #ec4899);
+  }
+
+  50% {
+    border-image-source: linear-gradient(45deg, #ec4899, #2dd4bf);
+  }
+
+  100% {
+    border-image-source: linear-gradient(45deg, #2dd4bf, #ec4899);
+  }
 }
 
 /* Typography */
@@ -294,9 +269,17 @@ section:hover {
 }
 
 @keyframes gradient-flow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .animated-underline::after {
@@ -311,8 +294,13 @@ section:hover {
 }
 
 @keyframes underline-expand {
-  0% { width: 0; }
-  100% { width: 80px; }
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 80px;
+  }
 }
 
 /* Buttons */
@@ -339,7 +327,7 @@ section:hover {
   left: 0;
 }
 
-.btn > * {
+.btn>* {
   position: relative;
 }
 
@@ -473,7 +461,7 @@ label {
   z-index: 1;
 }
 
-.parallax > * {
+.parallax>* {
   position: relative;
   z-index: 2;
   opacity: 1;
@@ -486,8 +474,15 @@ label {
 }
 
 @keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 /* Custom Scrollbar */
@@ -548,19 +543,25 @@ label {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.25rem; /* text-4xl -> smaller */
+    font-size: 2.25rem;
+    /* text-4xl -> smaller */
   }
 
   h2 {
-    font-size: 1.75rem; /* text-3xl -> smaller */
+    font-size: 1.75rem;
+    /* text-3xl -> smaller */
   }
 
   h3 {
-    font-size: 1.25rem; /* text-xl -> smaller */
+    font-size: 1.25rem;
+    /* text-xl -> smaller */
   }
 
-  p, li, .text-sm {
-    font-size: 0.875rem; /* text-sm */
+  p,
+  li,
+  .text-sm {
+    font-size: 0.875rem;
+    /* text-sm */
   }
 
   .btn {
@@ -608,7 +609,10 @@ label {
     font-size: 1rem;
   }
 
-  .grid-cols-2, .grid-cols-3, .grid-cols-4, .grid-cols-6 {
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4,
+  .grid-cols-6 {
     grid-template-columns: 1fr;
   }
 
@@ -616,7 +620,8 @@ label {
     padding: 1.5rem;
   }
 
-  input, textarea {
+  input,
+  textarea {
     padding: 0.5rem;
     font-size: 0.875rem;
   }
@@ -628,19 +633,25 @@ label {
 
 @media (max-width: 640px) {
   h1 {
-    font-size: 1.75rem; /* text-3xl -> smaller */
+    font-size: 1.75rem;
+    /* text-3xl -> smaller */
   }
 
   h2 {
-    font-size: 1.5rem; /* text-2xl -> smaller */
+    font-size: 1.5rem;
+    /* text-2xl -> smaller */
   }
 
   h3 {
-    font-size: 1rem; /* text-lg -> smaller */
+    font-size: 1rem;
+    /* text-lg -> smaller */
   }
 
-  p, li, .text-sm {
-    font-size: 0.75rem; /* smaller than text-sm */
+  p,
+  li,
+  .text-sm {
+    font-size: 0.75rem;
+    /* smaller than text-sm */
   }
 
   .main-container {
@@ -653,7 +664,10 @@ label {
     padding: 2rem 0.5rem;
   }
 
-  .project-card, .certificate-card, .blog-card, .testimonial-card {
+  .project-card,
+  .certificate-card,
+  .blog-card,
+  .testimonial-card {
     padding: 1rem;
   }
 
