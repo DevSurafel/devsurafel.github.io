@@ -40,7 +40,7 @@ body {
 /* Main Container */
 .main-container {
   max-width: 1280px;
-  background: rgba(31, 41, 55, 0.85);
+  background: var(--card-bg);
   backdrop-filter: blur(8px);
   box-shadow: var(--shadow-dark);
   border-radius: 16px;
@@ -71,7 +71,7 @@ main {
 
 /* Navbar */
 #navbar {
-  background: rgba(31, 41, 55, 0.85);
+  background: var(--card-bg);
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
 }
@@ -145,7 +145,7 @@ main {
 
 /* Section Styles */
 section {
-  background: rgba(31, 41, 55, 0.85);
+  background: var(--card-bg);
   backdrop-filter: blur(8px);
   box-shadow: var(--shadow-light);
   border-radius: 12px;
@@ -384,7 +384,7 @@ section:hover {
 /* Form Inputs */
 input,
 textarea {
-  background: rgba(31, 41, 55, 0.8);
+  background: rgba(var(--text-primary), 0.1);
   transition: all 0.3s ease;
   color: var(--text-primary);
 }
@@ -475,7 +475,7 @@ label {
     margin: 0.75rem 0.5rem;
     padding: 1.5rem 0.75rem;
     border-radius: 8px;
-    background: rgba(31, 41, 55, 0.85);
+    background: var(--card-bg);
     backdrop-filter: blur(8px);
   }
 
@@ -572,7 +572,9 @@ label {
   #experience .timeline-item {
     position: relative;
     padding-bottom: 0;
-    background: var(--gray-800);
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    background: var(--card-bg);
     padding: 0.75rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-light);
@@ -600,16 +602,22 @@ label {
     box-shadow: none;
   }
 
+  #experience .timeline-item h3:not(.text-lg) {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+
+  #experience .timeline-item h3.text-lg {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+  }
+
   #experience .timeline-item img {
     max-height: 30px;
     width: auto;
     margin-bottom: 0.5rem;
     border-radius: 4px;
-  }
-
-  #experience .timeline-item h3 {
-    font-size: 0.875rem;
-    margin-bottom: 0.25rem;
   }
 
   #experience .timeline-item p,
@@ -759,7 +767,7 @@ label {
     width: 100%;
     max-height: calc(100vh - 48px);
     overflow-y: auto;
-    background: rgba(31, 41, 55, 0.95);
+    background: var(--card-bg);
     backdrop-filter: blur(8px);
     z-index: 100;
   }
@@ -866,12 +874,16 @@ label {
   }
 
   /* Experience section */
-  #experience .timeline-item img {
-    max-height: 25px;
+  #experience .timeline-item h3:not(.text-lg) {
+    font-size: 0.75rem;
   }
 
-  #experience .timeline-item h3 {
-    font-size: 0.75rem;
+  #experience .timeline-item h3.text-lg {
+    font-size: 0.675rem;
+  }
+
+  #experience .timeline-item img {
+    max-height: 25px;
   }
 
   #experience .timeline-item p,
