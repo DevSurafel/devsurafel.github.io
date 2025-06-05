@@ -37,8 +37,6 @@ body {
 }
 
 .main-container {
-  margin: 3rem 1rem;
-  padding: 1rem;
   background: var(--card-bg);
   box-shadow: var(--shadow-dark);
 }
@@ -272,42 +270,90 @@ h3 {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+  /* Full-width layout */
+  .main-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  section {
+    margin: 1rem 0.5rem;
+    padding: 1rem 0.75rem;
+    border-radius: 8px;
+  }
+
   /* Grid layouts */
   .grid-cols-2,
   .grid-cols-3,
-  .grid-cols-4,
-  .grid-cols-6 {
+  .grid-cols-4 {
     grid-template-columns: 1fr;
   }
 
   .project-card,
   .certificate-card,
   .blog-card,
-  .testimonial-card {
+  .testimonial-card,
+  .contact-card {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 
   .project-card img,
   .certificate-card img,
   .blog-card img {
     height: auto;
-    max-height: 150px;
+    max-height: 120px;
     width: 100%;
     object-fit: cover;
   }
 
+  /* Skills section - horizontal scroll */
+  #skills .grid-cols-6,
+  #skills .grid-cols-4,
+  #skills .grid-cols-3,
+  #skills .grid-cols-2 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .skill-card {
+    flex: 0 0 auto;
+    width: 80px;
+    text-align: center;
+    scroll-snap-align: center;
+  }
+
   .skill-card img {
     height: auto;
-    max-height: 50px;
+    max-height: 30px;
     width: auto;
     max-width: 100%;
   }
 
+  .skill-card p {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+  }
+
   .skill-card .progress-ring {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
+    margin: 0.25rem auto;
+  }
+
+  .progress-ring__circle {
+    r: 18;
+    cx: 20;
+    cy: 20;
   }
 
   /* Navigation */
@@ -324,25 +370,13 @@ h3 {
   }
 
   #mobile-menu a {
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
     text-align: center;
   }
 
   #mobile-menu-btn i {
-    font-size: 1.5rem;
-  }
-
-  /* Sections */
-  .main-container {
-    margin: 1rem 0.5rem;
-    padding: 0.5rem;
-  }
-
-  section {
-    margin: 1rem 0.5rem;
-    padding: 1.5rem 0.75rem;
-    border-radius: 8px;
+    font-size: 1.25rem;
   }
 
   /* AOS animations */
@@ -369,33 +403,37 @@ h3 {
 
   /* Typography */
   h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   h3 {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 
   p,
   li,
-  .text-sm {
-    font-size: 0.875rem;
+  .text-sm,
+  .text-gray-300,
+  .text-gray-400,
+  .text-teal-400 {
+    font-size: 0.75rem;
+    line-height: 1.4;
   }
 
   /* Buttons and icons */
   .btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
     width: 100%;
     text-align: center;
   }
 
   .social-icon i {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .hero-buttons a {
@@ -403,25 +441,42 @@ h3 {
     margin-bottom: 0.5rem;
   }
 
-  /* Timeline */
+  /* Experience section - timeline */
   .timeline-item .flex {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 2rem;
   }
 
   .timeline-item .w-1/2 {
     width: 100%;
-    padding: 0.5rem;
-    text-align: center;
+    padding: 0.5rem 0;
+    text-align: left;
   }
 
   .timeline-item::before {
-    left: 20px;
-    transform: translateX(0);
+    left: 0.75rem;
+    top: 1rem;
+    transform: none;
+    width: 12px;
+    height: 12px;
+    border-width: 3px;
   }
 
   .timeline::before {
-    left: 20px;
+    left: 0.75rem;
+    width: 3px;
+  }
+
+  .timeline-item img {
+    max-height: 40px;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-item .bg-gray-900 {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
   }
 }
 
@@ -430,27 +485,32 @@ h3 {
   .project-card img,
   .certificate-card img,
   .blog-card img {
-    max-height: 120px;
+    max-height: 100px;
+  }
+
+  .skill-card {
+    width: 70px;
   }
 
   .skill-card img {
-    max-height: 40px;
+    max-height: 25px;
   }
 
   .skill-card .progress-ring {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .progress-ring__circle {
+    r: 16;
+    cx: 17.5;
+    cy: 17.5;
   }
 
   /* Sections */
-  .main-container {
-    margin: 0.5rem 0.25rem;
-    padding: 0.25rem;
-  }
-
   section {
     margin: 0.5rem 0.25rem;
-    padding: 1rem 0.5rem;
+    padding: 0.75rem 0.5rem;
   }
 
   /* Typography */
@@ -459,26 +519,45 @@ h3 {
   }
 
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   p,
   li,
-  .text-sm {
-    font-size: 0.75rem;
+  .text-sm,
+  .text-gray-300,
+  .text-gray-400,
+  .text-teal-400 {
+    font-size: 0.675rem;
+    line-height: 1.3;
   }
 
   /* Buttons */
   .btn {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.75rem;
+    padding: 0.375rem 0.625rem;
+    font-size: 0.675rem;
   }
 
   .social-icon i {
-    font-size: 1rem;
+    font-size: 0.875rem;
+  }
+
+  /* Timeline */
+  .timeline-item::before {
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+  }
+
+  .timeline::before {
+    width: 2px;
+  }
+
+  .timeline-item img {
+    max-height: 35px;
   }
 }
