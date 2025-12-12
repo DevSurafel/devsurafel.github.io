@@ -1,3 +1,4 @@
+import React from 'react';
 import SectionWrapper from '../ui/SectionWrapper';
 import { ExternalLink } from 'lucide-react';
 
@@ -10,12 +11,21 @@ const certifications = [
 const Certifications = () => (
   <SectionWrapper id="certifications" className="py-20">
     <h2 className="section-title animated-underline">Certifications</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {certifications.map((cert) => (
-        <div key={cert.title} className="glass-card p-6 hover:-translate-y-2 transition-transform">
-          <h3 className="text-xl font-semibold text-primary mb-2">{cert.title}</h3>
-          <p className="text-muted-foreground text-sm mb-2">{cert.description}</p>
-          <p className="text-sm"><strong className="text-foreground">Issuer:</strong> {cert.issuer}</p>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {certifications.map((cert, index) => (
+        <div 
+          key={cert.title} 
+          className="cert-card group"
+          style={{ animationDelay: `${index * 0.1}s` }}
+        >
+          <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <span className="text-2xl">🏆</span>
+          </div>
+          <h3 className="text-xl font-bold text-primary mb-3 pr-14 group-hover:text-secondary transition-colors duration-300">{cert.title}</h3>
+          <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{cert.description}</p>
+          <div className="flex items-center gap-2 text-sm">
+            <span className="px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">{cert.issuer}</span>
+          </div>
         </div>
       ))}
     </div>

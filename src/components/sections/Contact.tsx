@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import SectionWrapper from '../ui/SectionWrapper';
 import { Phone, Mail, Github, Linkedin, Send } from 'lucide-react';
 

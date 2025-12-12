@@ -1,3 +1,4 @@
+import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
 interface Project {
@@ -17,18 +18,25 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="project-card">
+    <div className="project-card group">
       <div className="relative overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-56 object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
-        <h3 className="absolute bottom-4 left-4 right-4 text-xl font-semibold text-primary">
-          {project.title}
-        </h3>
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+        <div className="absolute bottom-0 left-0 right-0 p-6">
+          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+            {project.title}
+          </h3>
+        </div>
+        <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+          <span className="px-3 py-1 rounded-full bg-primary/90 text-primary-foreground text-xs font-bold uppercase tracking-wider">
+            {project.category}
+          </span>
+        </div>
       </div>
       
       <div className="p-6">

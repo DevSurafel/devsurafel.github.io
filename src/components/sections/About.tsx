@@ -1,3 +1,4 @@
+import React from 'react';
 import SectionWrapper from '../ui/SectionWrapper';
 
 const About = () => {

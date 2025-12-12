@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 interface TypedTextProps {
   strings: string[];
@@ -39,9 +39,9 @@ const TypedText = ({ strings, typeSpeed = 80, backSpeed = 40, backDelay = 1000 }
   }, [text, isDeleting, stringIndex, strings, typeSpeed, backSpeed, backDelay]);
 
   return (
-    <span className="text-yellow-400 font-light">
+    <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-bold">
       {text}
-      <span className="animate-pulse">|</span>
+      <span className="text-primary animate-pulse">|</span>
     </span>
   );
 };

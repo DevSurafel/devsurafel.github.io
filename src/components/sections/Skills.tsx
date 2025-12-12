@@ -1,3 +1,4 @@
+import React from 'react';
 import SectionWrapper from '../ui/SectionWrapper';
 import SkillCard from '../ui/SkillCard';
 

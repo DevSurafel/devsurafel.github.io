@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import SectionWrapper from '../ui/SectionWrapper';
 import ProjectCard from '../ui/ProjectCard';
 import { ExternalLink } from 'lucide-react';
@@ -74,16 +74,12 @@ const Projects = () => {
       <h2 className="section-title animated-underline">Projects</h2>
       
       {/* Filter buttons */}
-      <div className="flex justify-center gap-4 mb-8">
+      <div className="flex justify-center gap-4 mb-10">
         {filters.map((filter) => (
           <button
             key={filter.id}
             onClick={() => setActiveFilter(filter.id)}
-            className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
-              activeFilter === filter.id
-                ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/30'
-                : 'border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground'
-            }`}
+            className={`filter-btn ${activeFilter === filter.id ? 'active' : ''}`}
           >
             {filter.label}
           </button>
