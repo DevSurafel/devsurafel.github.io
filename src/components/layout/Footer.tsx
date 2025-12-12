@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="section-container text-center">
         <p className="text-muted-foreground text-sm">
           © {currentYear} Surafel Diriba. All rights reserved.{' '}
-          <span className="inline-block animate-heartbeat">❤️</span>
+          <span className="inline-block animate-heartbeat"></span>
         </p>
 
         <div className="mt-4 flex justify-center gap-6">
