@@ -123,7 +123,7 @@
   /* Primary Button - Vibrant gradient with glow effect - ALWAYS VISIBLE */
   .btn-primary {
     @apply relative font-bold text-base overflow-hidden
-           transition-all duration-400 transform;
+           transition-all duration-300 transform;
     padding: 1.25rem 2.75rem;
     border-radius: 50px;
     background: linear-gradient(90deg, 
@@ -319,7 +319,7 @@
       0 16px 56px hsl(220 20% 50% / 0.1);
   }
   
-  .project-card .p-6 {
+  .project-card-content {
     padding: 1.5rem 1.75rem 1.75rem;
   }
   
