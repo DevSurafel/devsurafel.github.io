@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 interface Skill {
   name: string;
   image: string;
-  progress: number;
   tooltip: string;
 }
 
@@ -13,33 +12,9 @@ interface SkillCardProps {
 
 const SkillCard = ({ skill }: SkillCardProps) => {
   const [showTooltip, setShowTooltip] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  const circumference = 2 * Math.PI * 30;
-  const strokeDashoffset = circumference - (skill.progress / 100) * circumference;
 
   return (
     <div
-      ref={cardRef}
       className="skill-card relative"
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
@@ -58,42 +33,7 @@ const SkillCard = ({ skill }: SkillCardProps) => {
         className="h-16 w-16 mx-auto object-contain"
         loading="lazy"
       />
-      <p className="mt-2 text-muted-foreground text-sm">{skill.name}</p>
-
-      {/* Progress ring */}
-      <svg className="w-16 h-16 mx-auto mt-2" viewBox="0 0 80 80">
-        <circle
-          className="text-muted"
-          stroke="currentColor"
-          strokeWidth="4"
-          fill="transparent"
-          r="30"
-          cx="40"
-          cy="40"
-        />
-        <circle
-          className="text-primary progress-ring__circle"
-          stroke="currentColor"
-          strokeWidth="4"
-          fill="transparent"
-          r="30"
-          cx="40"
-          cy="40"
-          style={{
-            strokeDasharray: circumference,
-            strokeDashoffset: isVisible ? strokeDashoffset : circumference,
-            strokeLinecap: 'round',
-          }}
-        />
-        <text
-          x="40"
-          y="45"
-          textAnchor="middle"
-          className="fill-foreground text-xs font-semibold"
-        >
-          {skill.progress}%
-        </text>
-      </svg>
+      <p className="mt-3 text-muted-foreground text-sm font-medium">{skill.name}</p>
     </div>
   );
 };
