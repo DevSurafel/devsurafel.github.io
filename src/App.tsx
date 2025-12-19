@@ -16,9 +16,8 @@ function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
   useEffect(() => {
-    // Simulate loading
-    const timer = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timer);
+    // Quick load - no artificial delay
+    setLoading(false);
   }, []);
 
   useEffect(() => {
