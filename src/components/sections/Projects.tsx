@@ -63,6 +63,15 @@ const projects: Project[] = [
     category: 'all',
     sourceUrl: 'https://github.com/DevSurafel/OS-SCHEDULING-SIMULATOR',
   },
+   {
+    id: '6',
+    title: 'Deepfake Detection',
+    description: 'A CNN-based deepfake detection system that analyzes eye blinking patterns using depthwise separable convolutions and Eye Aspect Ratio features. Trained on FaceForensics++ dataset with multi-branch architecture processing dual eye images for frame-level fake/real classification.',
+    image: '/assets/img/project-aim_bert-bias.png',
+    tools: 'Python, TensorFlow/Keras, CNN, OpenCV, dlib, Streamlit, NumPy, Pandas',
+    category: 'all',
+    sourceUrl: 'https://github.com/DevSurafel/OS-SCHEDULING-SIMULATOR',
+  },
 ];
 
 const filters = [
