@@ -55,11 +55,11 @@ const Skills = () => {
     <SectionWrapper id="skills" className="py-20">
       <h2 className="section-title animated-underline">Skills</h2>
       
-      <div className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {skillCategories.map((category) => (
-          <div key={category.title} className="glass-card p-6">
-            <h3 className="text-2xl font-semibold text-primary mb-6">{category.title}</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div key={category.title} className="glass-card p-5">
+            <h3 className="text-xl font-semibold text-primary mb-4">{category.title}</h3>
+            <div className="grid grid-cols-3 gap-3">
               {category.skills.map((skill) => (
                 <SkillCard key={skill.name} skill={skill} />
               ))}
