@@ -3,9 +3,9 @@ import SectionWrapper from '../ui/SectionWrapper';
 import { Award } from 'lucide-react';
 
 const certifications = [
-  { title: 'Machine Learning (Stanford)', issuer: 'Coursera', description: 'Completed an in-depth course on machine learning, covering supervised and unsupervised learning, neural networks.' },
-  { title: 'AWS Certified Solutions Architect', issuer: 'Amazon Web Services', description: 'Mastered cloud architecture and deployment on AWS, including EC2, S3, and Lambda.' },
-  { title: 'Python for Data Science', issuer: 'IBM', description: 'Learned advanced Python techniques for data analysis, visualization, and machine learning.' },
+  { title: 'CCNAv7: Switching, Routing, and Wireless Essentials', issuer: 'Cisco Networking Academy', description: 'Completed coursework covering core networking concepts including switching, routing protocols, VLANs, wireless networking fundamentals, and network configuration using Cisco devices.' },
+  { title: 'NDG Linux Essentials', issuer: 'Cisco Networking Academy', description: 'Gained foundational knowledge of Linux systems, including command-line usage, file systems, user management, basic networking concepts, and system administration fundamentals.' },
+  { title: 'Python Data Structures', issuer: 'Coursera | University of Michigan', description: 'Completed an online course focused on core data structures in Python, including lists, dictionaries, tuples, file handling, and problem-solving using structured data.' },
 ];
 
 const Certifications = () => (
