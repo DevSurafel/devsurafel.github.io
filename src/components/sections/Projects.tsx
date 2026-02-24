@@ -32,7 +32,6 @@ const projects: Project[] = [
     image: '/assets/img/project-quizup-logo-1.png',
     tools: 'React, Node.js, Express, Socket.IO, CodeMirror, Judge0 API, Docker',
     category: 'web',
-    liveUrl: 'https://quiz-up-app.herokuapp.com/',
     sourceUrl: 'https://github.com/DevSurafel/CODE-TOGETHER',
   },
   {
@@ -42,7 +41,6 @@ const projects: Project[] = [
     image: '/assets/img/project-blog-logo.jpg',
     tools: 'React, Firebase Firestore, Telegram Web App API, Netlify Functions, Telegraf.js, Framer Motion',
     category: 'web',
-    liveUrl: 'https://flask-heroku-blog.herokuapp.com/',
     sourceUrl: 'https://github.com/DevSurafel/DIGITAL-BIRR',
   },
   {
