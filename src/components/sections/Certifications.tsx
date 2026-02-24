@@ -5,7 +5,7 @@ import { Award } from 'lucide-react';
 const certifications = [
   { title: 'CCNAv7: Switching, Routing, and Wireless Essentials', issuer: 'Cisco Networking Academy', description: 'Completed coursework covering core networking concepts including switching, routing protocols, VLANs, wireless networking fundamentals, and network configuration using Cisco devices.' },
   { title: 'NDG Linux Essentials', issuer: 'Cisco Networking Academy', description: 'Gained foundational knowledge of Linux systems, including command-line usage, file systems, user management, basic networking concepts, and system administration fundamentals.' },
-  { title: 'Python Data Structures', issuer: 'Coursera | University of Michigan', description: 'Completed an online course focused on core data structures in Python, including lists, dictionaries, tuples, file handling, and problem-solving using structured data.' },
+  { title: 'Python Data Structures', issuer: 'Coursera | University of Michigan', description: 'Completed coursework on Python data structures and data processing, including lists, dictionaries, tuples, file handling, and structured problem-solving. (Grade: 97.6%)' },
 ];
 
 const Certifications = () => (
