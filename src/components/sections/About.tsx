@@ -32,10 +32,10 @@ const About = () => {
 
       <div className="max-w-5xl mx-auto space-y-8">
         <p className="text-base md:text-lg leading-relaxed text-muted-foreground text-center max-w-3xl mx-auto">
-         I am a Computer Engineering graduate with a strong interest in scalable systems and machine learning infrastructure. 
-         My academic work has focused on core computer science foundations including operating systems, algorithms, and data-intensive systems. 
+         I am a Computer Engineering graduate with a strong interest in scalable software systems and machine learning infrastructure. 
+         My academic work has centered on core computer science foundations including operating systems, algorithms, database systems, and computer networks. 
          As a Government of India scholarship recipient, I pursued research in physiological-signal-based deepfake detection and built implementation-heavy projects such as CPU scheduling simulators and end-to-end ML pipelines. 
-         I am particularly interested in performance trade-offs, distributed systems, and reproducible machine learning workflows, and I aim to deepen this focus through graduate study.
+         I am particularly interested in system performance, distributed computing, and the practical deployment of machine learning models under real-world constraints, and I aim to deepen this focus through graduate study.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
