@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Github, Twitter, Rocket } from 'lucide-react';
+import { Linkedin, Github, Twitter, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,14 +11,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-card/80 backdrop-blur-lg py-8 mt-12">
+    <footer className="py-8 border-t border-border">
       <div className="section-container text-center">
-        <p className="text-muted-foreground text-sm">
-          © {currentYear} Surafel Diriba. All rights reserved.{' '}
-          <span className="inline-block animate-heartbeat"></span>
-        </p>
-
-        <div className="mt-4 flex justify-center gap-6">
+        <div className="flex justify-center gap-3 mb-4">
           {socialLinks.map((link) => (
             <a
               key={link.href}
@@ -28,16 +23,20 @@ const Footer = () => {
               className="social-icon"
               aria-label={link.label}
             >
-              <link.icon className="w-5 h-5" />
+              <link.icon className="w-4 h-4" />
             </a>
           ))}
         </div>
 
+        <p className="text-muted-foreground text-sm mb-3">
+          © {currentYear} Surafel Diriba. All rights reserved.
+        </p>
+
         <a
           href="#hero"
-          className="mt-4 inline-flex items-center gap-2 text-primary hover:text-accent transition-colors"
+          className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
         >
-          <Rocket className="w-4 h-4" />
+          <ArrowUp className="w-3.5 h-3.5" />
           Back to Top
         </a>
       </div>

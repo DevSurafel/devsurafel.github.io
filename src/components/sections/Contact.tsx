@@ -38,23 +38,23 @@ const Contact = () => {
   };
 
   return (
-    <SectionWrapper id="contact" className="py-20">
+    <SectionWrapper id="contact" className="py-16">
       <h2 className="section-title animated-underline">Get in Touch</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-3">
           {contactInfo.map((item) => (
             <div key={item.label} className="contact-card">
-              <item.icon className="w-6 h-6 text-primary" />
+              <item.icon className="w-5 h-5 text-primary shrink-0" />
               <div>
-                <p className="text-foreground font-medium">{item.label}</p>
-                <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">{item.value}</a>
+                <p className="text-sm font-medium text-foreground">{item.label}</p>
+                <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">{item.value}</a>
               </div>
             </div>
           ))}
         </div>
-        <form onSubmit={handleSubmit} className="glass-card p-8 space-y-6">
+        <form onSubmit={handleSubmit} className="glass-card p-6 space-y-4">
           {status && (
-            <div className={`p-4 rounded-lg ${status.type === 'success' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}`}>
+            <div className={`p-3 rounded-lg text-sm ${status.type === 'success' ? 'bg-green-500/10 text-green-400' : 'bg-red-500/10 text-red-400'}`}>
               {status.message}
             </div>
           )}
@@ -64,7 +64,7 @@ const Contact = () => {
             required 
             value={formData.name} 
             onChange={(e) => setFormData({...formData, name: e.target.value})} 
-            className="w-full px-4 py-3 rounded-lg bg-muted text-foreground border border-border focus:ring-2 focus:ring-primary focus:outline-none"
+            className="w-full px-4 py-2.5 rounded-lg bg-input text-foreground border border-border text-sm focus:ring-2 focus:ring-primary focus:outline-none"
             disabled={isSubmitting}
           />
           <input 
@@ -73,16 +73,16 @@ const Contact = () => {
             required 
             value={formData.email} 
             onChange={(e) => setFormData({...formData, email: e.target.value})} 
-            className="w-full px-4 py-3 rounded-lg bg-muted text-foreground border border-border focus:ring-2 focus:ring-primary focus:outline-none"
+            className="w-full px-4 py-2.5 rounded-lg bg-input text-foreground border border-border text-sm focus:ring-2 focus:ring-primary focus:outline-none"
             disabled={isSubmitting}
           />
           <textarea 
             placeholder="Message" 
-            rows={5} 
+            rows={4} 
             required 
             value={formData.message} 
             onChange={(e) => setFormData({...formData, message: e.target.value})} 
-            className="w-full px-4 py-3 rounded-lg bg-muted text-foreground border border-border focus:ring-2 focus:ring-primary focus:outline-none resize-none"
+            className="w-full px-4 py-2.5 rounded-lg bg-input text-foreground border border-border text-sm focus:ring-2 focus:ring-primary focus:outline-none resize-none"
             disabled={isSubmitting}
           />
           <button 
@@ -91,13 +91,9 @@ const Contact = () => {
             disabled={isSubmitting}
           >
             {isSubmitting ? (
-              <>
-                <Loader2 className="w-4 h-4 animate-spin" /> Sending...
-              </>
+              <><Loader2 className="w-4 h-4 animate-spin" /> Sending...</>
             ) : (
-              <>
-                <Send className="w-4 h-4" /> Send Message
-              </>
+              <><Send className="w-4 h-4" /> Send Message</>
             )}
           </button>
         </form>

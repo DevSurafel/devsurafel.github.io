@@ -20,15 +20,14 @@ function App() {
     setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   };
 
-
   return (
     <div className="min-h-screen bg-background">
       <ScrollProgress />
       <Navbar theme={theme} onToggleTheme={toggleTheme} />
       
-      <main className="relative z-10">
+      <main className="relative">
         <Hero />
-        <div className="max-w-7xl mx-auto my-12 bg-card/80 backdrop-blur-lg shadow-2xl rounded-2xl overflow-hidden">
+        <div className="space-y-0">
           <About />
           <Projects />
           <Skills />

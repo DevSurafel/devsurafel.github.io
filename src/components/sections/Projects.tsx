@@ -18,7 +18,7 @@ const projects: Project[] = [
   {
     id: '1',
     title: 'DeFiLance – Web3 Freelancing Platform',
-    description: 'A decentralized freelancing marketplace with smart contract escrow, USDC payments on Polygon, automated dispute resolution, revision tracking, and a social media account trading system—enabling trustless client-freelancer transactions.',
+    description: 'A decentralized freelancing marketplace with smart contract escrow, USDC payments on Polygon, automated dispute resolution, revision tracking, and a social media account trading system.',
     image: '/assets/img/project-music-player.png',
     tools: 'React, TypeScript, Solidity, Ethers.js, Hardhat, Polygon, OpenZeppelin, USDC, Supabase, Tailwind CSS',
     category: 'web',
@@ -28,7 +28,7 @@ const projects: Project[] = [
   {
     id: '2',
     title: 'CodeTogether - Collaborative Editor',
-    description: 'A real-time multi-user coding environment with live code sync, multi-language execution, integrated terminal, teacher mode locking, and doubt chat system—built for pair programming and classroom collaboration.',
+    description: 'A real-time multi-user coding environment with live code sync, multi-language execution, integrated terminal, teacher mode locking, and doubt chat system.',
     image: '/assets/img/project-quizup-logo-1.png',
     tools: 'React, Node.js, Express, Socket.IO, CodeMirror, Judge0 API, Docker',
     category: 'web',
@@ -38,7 +38,7 @@ const projects: Project[] = [
   {
     id: '3',
     title: 'BIRR - Telegram Tap Game',
-    description: 'A viral tap-to-earn Telegram Mini App featuring real-time gamification, progressive leveling, referral rewards, and an upgradeable boost economy—all backed by Firebase and serverless functions.',
+    description: 'A viral tap-to-earn Telegram Mini App featuring real-time gamification, progressive leveling, referral rewards, and an upgradeable boost economy.',
     image: '/assets/img/project-blog-logo.jpg',
     tools: 'React, Firebase Firestore, Telegram Web App API, Netlify Functions, Telegraf.js, Framer Motion',
     category: 'web',
@@ -48,7 +48,7 @@ const projects: Project[] = [
   {
     id: '4',
     title: 'Fake News Detection System',
-    description: 'End-to-end ML pipeline for fake news classification using TF-IDF features, speaker credibility metrics, Random Forest and RoBERTa transformer models with real-time inference via FastAPI REST API.',
+    description: 'End-to-end ML pipeline for fake news classification using TF-IDF features, speaker credibility metrics, Random Forest and RoBERTa transformer models with real-time inference via FastAPI.',
     image: '/assets/img/project-aim_bert-bias.png',
     tools: 'Python, scikit-learn, PyTorch, RoBERTa, FastAPI, Docker, MLflow',
     category: 'ai',
@@ -57,7 +57,7 @@ const projects: Project[] = [
   {
     id: '5',
     title: 'CPU Scheduler Simulator',
-    description: 'An interactive educational tool for visualizing and understanding CPU scheduling algorithms with real-time queue animations, step-by-step execution controls, and performance metrics analysis.',
+    description: 'An interactive educational tool for visualizing CPU scheduling algorithms with real-time queue animations, step-by-step execution controls, and performance metrics.',
     image: '/assets/img/project-aim_bert-bias.png',
     tools: 'Java, JavaFX, JFoenix, Eclipse',
     category: 'all',
@@ -66,7 +66,7 @@ const projects: Project[] = [
   {
     id: '6',
     title: 'Deepfake Detection (Published Research)',
-    description: 'CNN-based deepfake detection using physiological eye-blink patterns with depthwise separable convolutions and EAR features. Trained on FaceForensics++ with 68-point facial landmark extraction via dlib.',
+    description: 'CNN-based deepfake detection using physiological eye-blink patterns with depthwise separable convolutions and EAR features on FaceForensics++ dataset.',
     image: '/assets/img/project-aim_bert-bias.png',
     tools: 'Python, TensorFlow/Keras, CNN, OpenCV, dlib, NumPy, Pandas',
     category: 'ai',
@@ -88,10 +88,10 @@ const Projects = () => {
     : projects.filter(p => p.category === activeFilter);
 
   return (
-    <SectionWrapper id="projects" className="py-20">
+    <SectionWrapper id="projects" className="py-16">
       <h2 className="section-title animated-underline">Projects</h2>
 
-      <div className="flex justify-center gap-4 mb-10">
+      <div className="flex justify-center gap-2 mb-8">
         {filters.map((filter) => (
           <button
             key={filter.id}
@@ -103,7 +103,7 @@ const Projects = () => {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {filteredProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
@@ -114,9 +114,9 @@ const Projects = () => {
           href="https://github.com/DevSurafel"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-primary inline-flex items-center gap-2"
+          className="btn-secondary inline-flex items-center gap-2"
         >
-          View More Projects
+          View More on GitHub
           <ExternalLink className="w-4 h-4" />
         </a>
       </div>

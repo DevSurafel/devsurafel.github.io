@@ -52,13 +52,13 @@ const skillCategories: SkillCategory[] = [
 
 const Skills = () => {
   return (
-    <SectionWrapper id="skills" className="py-20">
+    <SectionWrapper id="skills" className="py-16">
       <h2 className="section-title animated-underline">Skills</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {skillCategories.map((category) => (
           <div key={category.title} className="glass-card p-5">
-            <h3 className="text-xl font-semibold text-primary mb-4">{category.title}</h3>
+            <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">{category.title}</h3>
             <div className="grid grid-cols-3 gap-3">
               {category.skills.map((skill) => (
                 <SkillCard key={skill.name} skill={skill} />

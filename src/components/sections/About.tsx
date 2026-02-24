@@ -27,13 +27,13 @@ const highlights = [
 
 const About = () => {
   return (
-    <SectionWrapper id="about" className="py-20">
+    <SectionWrapper id="about" className="py-16">
       <h2 className="section-title animated-underline">About Me</h2>
 
-      <div className="max-w-3xl mx-auto space-y-6">
-        <p className="text-lg leading-relaxed text-muted-foreground">
+      <div className="max-w-5xl mx-auto space-y-8">
+        <p className="text-base md:text-lg leading-relaxed text-muted-foreground text-center max-w-3xl mx-auto">
           I'm Surafel Diriba — a Computer Engineering graduate from Marwadi University, India, 
-          and a recipient of the Study in India Scholarship (Government of India). I specialize 
+          and a recipient of the Study in India Scholarship. I specialize 
           in backend development, machine learning, and full-stack applications, with published 
           research in deepfake detection.
         </p>

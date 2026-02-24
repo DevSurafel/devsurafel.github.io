@@ -7,7 +7,7 @@ interface Project {
   description: string;
   image: string;
   tools: string;
-  category: 'web' | 'ai';
+  category: 'web' | 'ai' | 'all';
   liveUrl?: string;
   sourceUrl?: string;
 }
@@ -23,26 +23,19 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-56 object-cover"
+          className="w-full h-48 object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
-        <div className="absolute bottom-0 left-0 right-0 p-6">
-          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-            {project.title}
-          </h3>
-        </div>
-        <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-          <span className="px-3 py-1 rounded-full bg-primary/90 text-primary-foreground text-xs font-bold uppercase tracking-wider">
-            {project.category}
-          </span>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60" />
       </div>
       
-      <div className="p-6">
-        <p className="text-muted-foreground text-sm mb-3">{project.description}</p>
-        <p className="text-sm text-muted-foreground mb-4">
-          <strong className="text-foreground">Tools:</strong> {project.tools}
+      <div className="p-5">
+        <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+          {project.title}
+        </h3>
+        <p className="text-sm text-muted-foreground mb-3 line-clamp-3">{project.description}</p>
+        <p className="text-xs text-muted-foreground mb-4">
+          <span className="text-foreground font-medium">Tools:</span> {project.tools}
         </p>
         
         <div className="flex gap-4">
@@ -51,10 +44,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-accent transition-colors text-sm inline-flex items-center gap-1"
+              className="text-sm text-primary hover:underline inline-flex items-center gap-1"
             >
-              <ExternalLink className="w-4 h-4" />
-              View Live
+              <ExternalLink className="w-3.5 h-3.5" />
+              Live
             </a>
           )}
           {project.sourceUrl && (
@@ -62,9 +55,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               href={project.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-accent transition-colors text-sm inline-flex items-center gap-1"
+              className="text-sm text-primary hover:underline inline-flex items-center gap-1"
             >
-              <Github className="w-4 h-4" />
+              <Github className="w-3.5 h-3.5" />
               Source
             </a>
           )}
