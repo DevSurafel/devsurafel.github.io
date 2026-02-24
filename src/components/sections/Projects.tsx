@@ -17,13 +17,13 @@ interface Project {
 const projects: Project[] = [
   {
     id: '1',
-    title: 'DeFiLance – Web3 Freelancing Platform',
-    description: 'A decentralized freelancing marketplace with smart contract escrow, USDC payments on Polygon, automated dispute resolution, revision tracking, and a social media account trading system.',
+    title: 'DeFiLance – Decentralized Freelance Marketplace',
+    description: 'A full-stack decentralized freelance marketplace with blockchain-powered escrow payments, real-time chat, social media account trading, credential verification, and Telegram bot integration. Features include job posting, bidding, milestone-based payments, dispute resolution, and admin dashboards.',
     image: '/assets/img/project-music-player.png',
-    tools: 'React, TypeScript, Solidity, Ethers.js, Hardhat, Polygon, OpenZeppelin, USDC, Supabase, Tailwind CSS',
+    tools: 'React, TypeScript, Tailwind CSS, Supabase, Solidity, Hardhat, Ethers.js, WalletConnect, Polygon, IPFS',
     category: 'web',
-    liveUrl: 'http://galvanicn.github.io/herokuapp.com',
-    sourceUrl: 'https://github.com/DevSurafel/DECENTRALIZED-MARKETPLACE',
+    liveUrl: 'https://de-fi-lance-beta.vercel.app',
+    sourceUrl: 'https://github.com/DevSurafel/DeFiLance-Beta',
   },
   {
     id: '2',
