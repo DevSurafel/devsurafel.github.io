@@ -9,7 +9,7 @@ interface Project {
   description: string;
   image: string;
   tools: string;
-  category: 'web' | 'ai';
+  category: 'web' | 'ai' | 'all';
   liveUrl?: string;
   sourceUrl?: string;
 }
@@ -48,9 +48,9 @@ const projects: Project[] = [
   {
     id: '4',
     title: 'Fake News Detection System',
-    description: 'A machine learning system combining traditional ML and deep learning approaches to detect misinformation, featuring a REST API for real-time predictions and a browser extension for on-page fake news detection.',
+    description: 'End-to-end ML pipeline for fake news classification using TF-IDF features, speaker credibility metrics, Random Forest and RoBERTa transformer models with real-time inference via FastAPI REST API.',
     image: '/assets/img/project-aim_bert-bias.png',
-    tools: 'Python, scikit-learn, PyTorch, Transformers (RoBERTa), FastAPI, Docker, MLflow, DVC, Great Expectations',
+    tools: 'Python, scikit-learn, PyTorch, RoBERTa, FastAPI, Docker, MLflow',
     category: 'ai',
     sourceUrl: 'https://github.com/DevSurafel/FAKE-NEWS-DETECTOR',
   },
@@ -63,13 +63,13 @@ const projects: Project[] = [
     category: 'all',
     sourceUrl: 'https://github.com/DevSurafel/OS-SCHEDULING-SIMULATOR',
   },
-   {
+  {
     id: '6',
-    title: 'Deepfake Detection',
-    description: 'A CNN-based deepfake detection system that analyzes eye blinking patterns using depthwise separable convolutions and Eye Aspect Ratio features. Trained on FaceForensics++ dataset with multi-branch architecture processing dual eye images for frame-level fake/real classification.',
+    title: 'Deepfake Detection (Published Research)',
+    description: 'CNN-based deepfake detection using physiological eye-blink patterns with depthwise separable convolutions and EAR features. Trained on FaceForensics++ with 68-point facial landmark extraction via dlib.',
     image: '/assets/img/project-aim_bert-bias.png',
-    tools: 'Python, TensorFlow/Keras, CNN, OpenCV, dlib, Streamlit, NumPy, Pandas',
-    category: 'all',
+    tools: 'Python, TensorFlow/Keras, CNN, OpenCV, dlib, NumPy, Pandas',
+    category: 'ai',
     sourceUrl: 'https://github.com/DevSurafel/OS-SCHEDULING-SIMULATOR',
   },
 ];
@@ -90,8 +90,7 @@ const Projects = () => {
   return (
     <SectionWrapper id="projects" className="py-20">
       <h2 className="section-title animated-underline">Projects</h2>
-      
-      {/* Filter buttons */}
+
       <div className="flex justify-center gap-4 mb-10">
         {filters.map((filter) => (
           <button
@@ -103,15 +102,13 @@ const Projects = () => {
           </button>
         ))}
       </div>
-      
-      {/* Project grid */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
-      
-      {/* View more button */}
+
       <div className="mt-8 text-center">
         <a
           href="https://github.com/DevSurafel"

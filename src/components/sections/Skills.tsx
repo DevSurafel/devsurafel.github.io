@@ -13,39 +13,39 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: 'Languages and Databases',
+    title: 'Programming Languages',
     skills: [
-      { name: 'Python', image: '/assets/img/python-logo-1-300x300.jpg', tooltip: 'Backend and AI development' },
-      { name: 'HTML5', image: '/assets/img/html5-300x300.jpg', tooltip: 'Semantic HTML' },
-      { name: 'CSS3', image: '/assets/img/css3-300x300.jpg', tooltip: 'CSS with animations' },
-      { name: 'MySQL', image: '/assets/img/mysql-logo-1-300x300.jpg', tooltip: 'Database management' },
-      { name: 'C++', image: '/assets/img/c++logo.png', tooltip: 'System-level programming' },
-      { name: 'C', image: '/assets/img/c-logo.png', tooltip: 'Low-level programming' },
+      { name: 'Python', image: '/assets/img/python-logo-1-300x300.jpg', tooltip: 'Backend, ML & scripting' },
+      { name: 'Java', image: '/assets/img/c++logo.png', tooltip: 'OOP & desktop apps' },
+      { name: 'JavaScript', image: '/assets/img/javascript.png', tooltip: 'Full-stack web development' },
+      { name: 'C/C++', image: '/assets/img/c-logo.png', tooltip: 'System-level programming' },
     ],
   },
   {
-    title: 'Libraries',
+    title: 'ML & AI',
     skills: [
-      { name: 'TensorFlow', image: '/assets/img/tensorflow-logo-1.png', tooltip: 'Machine learning and AI' },
+      { name: 'PyTorch', image: '/assets/img/pytorch-logo.png', tooltip: 'Deep learning' },
+      { name: 'scikit-learn', image: '/assets/img/sk-learn-logo-1-500x500.jpg', tooltip: 'Classical ML' },
       { name: 'OpenCV', image: '/assets/img/opencv-logo-1-500x500.jpg', tooltip: 'Computer vision' },
-      { name: 'Pandas', image: '/assets/img/pandas-logo-2-500x500.jpg', tooltip: 'Data manipulation' },
+      { name: 'TensorFlow', image: '/assets/img/tensorflow-logo-1.png', tooltip: 'ML framework' },
     ],
   },
   {
-    title: 'Frameworks',
+    title: 'Tools & Platforms',
     skills: [
-      { name: 'Flask', image: '/assets/img/flask-logo.png', tooltip: 'Backend development' },
-      { name: 'Django', image: '/assets/img/django-logo.webp', tooltip: 'Full-stack development' },
-      { name: 'Flutter', image: '/assets/img/flutterr.png', tooltip: 'Mobile app development' },
-    ],
-  },
-  {
-    title: 'Tools & Others',
-    skills: [
-      { name: 'AWS', image: '/assets/img/aws-logo.png', tooltip: 'Cloud computing' },
       { name: 'Git', image: '/assets/img/git.png', tooltip: 'Version control' },
-      { name: 'GitHub', image: '/assets/img/github.png', tooltip: 'Code collaboration' },
-      { name: 'VS Code', image: '/assets/img/vscode.png', tooltip: 'Code editor' },
+      { name: 'Docker', image: '/assets/img/heroku.png', tooltip: 'Containerization' },
+      { name: 'Linux', image: '/assets/img/shell-logo-1-300x300.jpg', tooltip: 'OS & scripting' },
+      { name: 'GitHub', image: '/assets/img/github.png', tooltip: 'Collaboration' },
+    ],
+  },
+  {
+    title: 'Frameworks & Databases',
+    skills: [
+      { name: 'FastAPI', image: '/assets/img/flask-logo.png', tooltip: 'Python REST APIs' },
+      { name: 'React', image: '/assets/img/nodejs.png', tooltip: 'Frontend framework' },
+      { name: 'MongoDB', image: '/assets/img/mysql-logo-1-300x300.jpg', tooltip: 'NoSQL database' },
+      { name: 'Firebase', image: '/assets/img/heroku.png', tooltip: 'BaaS platform' },
     ],
   },
 ];
@@ -54,7 +54,7 @@ const Skills = () => {
   return (
     <SectionWrapper id="skills" className="py-20">
       <h2 className="section-title animated-underline">Skills</h2>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {skillCategories.map((category) => (
           <div key={category.title} className="glass-card p-5">
