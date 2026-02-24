@@ -16,7 +16,7 @@ const Hero = () => {
     >
       <div className="section-container text-center relative z-10">
         <p className="text-sm font-medium text-muted-foreground tracking-widest uppercase mb-4 animate-fade-in">
-          Software Engineer & ML Researcher
+          Software Engineer
         </p>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 animate-slide-up text-foreground">
@@ -24,7 +24,7 @@ const Hero = () => {
         </h1>
 
         <h2 className="text-xl md:text-2xl mb-6 animate-slide-up text-muted-foreground" style={{ animationDelay: '0.1s' }}>
-          <TypedText strings={['Full-Stack Developer', 'ML Researcher', 'Problem Solver']} />
+          <TypedText strings={['Problem Solver', 'Innovator', 'Developer']} />
         </h2>
 
         <p className="text-base md:text-lg max-w-2xl mx-auto mb-10 text-muted-foreground animate-slide-up leading-relaxed" style={{ animationDelay: '0.15s' }}>
