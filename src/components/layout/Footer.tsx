@@ -7,7 +7,7 @@ const Footer = () => {
   const socialLinks = [
     { href: 'http://linkedin.com/in/Surafel-Diriba', icon: Linkedin, label: 'LinkedIn' },
     { href: 'https://github.com/DevSurafel/', icon: Github, label: 'GitHub' },
-    { href: 'https://twitter.com/Surafel_Diriba_', icon: Twitter, label: 'Twitter' },
+    { href: 'https://x.com/SurafelDiriba1', icon: Twitter, label: 'Twitter' },
   ];
 
   return (
