@@ -5,7 +5,7 @@ import { supabase } from '@/integrations/supabase/client';
 
 const contactInfo = [
   { icon: Phone, label: 'Phone', value: '+91 7069717408', href: 'tel:+917265991971' },
-  { icon: Mail, label: 'Email', value: 'surapheldiriba@gmail.com', href: 'mailto:surafelamdiriba@gmail.com' },
+  { icon: Mail, label: 'Email', value: 'surafelbirha@gmail.com', href: 'mailto:surafelbirha@gmail.com' },
   { icon: Github, label: 'GitHub', value: 'github.com/DevSurafel', href: 'http://github.com/DevSurafel' },
   { icon: Linkedin, label: 'LinkedIn', value: 'linkedin.com/in/Surafel-Diriba', href: 'http://linkedin.com/in/Surafel-Diriba' },
 ];
